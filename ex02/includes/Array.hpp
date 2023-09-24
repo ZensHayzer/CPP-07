@@ -6,7 +6,7 @@
 /*   By: ajeanne <ajeanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 09:20:06 by ajeanne           #+#    #+#             */
-/*   Updated: 2023/09/23 10:45:05 by ajeanne          ###   ########.fr       */
+/*   Updated: 2023/09/24 13:56:29 by ajeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include <iostream>
 
-template <typename t>
+template <typename T>
 
 class Array {
     public:
@@ -26,12 +26,12 @@ class Array {
         ~Array();
         
         Array   &operator=(Array const & src);
-        t       &operator[](size_t index) const;
+        T       &operator[](size_t index) const;
 
         unsigned int    size() const;
         
     private:
-        t               *_array;
+        T               *_array;
         unsigned int    _size;
 };
 

@@ -6,7 +6,7 @@
 /*   By: ajeanne <ajeanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 09:20:06 by ajeanne           #+#    #+#             */
-/*   Updated: 2023/09/23 09:48:12 by ajeanne          ###   ########.fr       */
+/*   Updated: 2023/09/24 13:55:53 by ajeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 #include <iostream>
 
-template <typename t, typename a>
-void    iter(t *array, int len, void (*f)(a &)) {
+template <typename T, typename a>
+void    iter(T *array, int len, void (*f)(a &)) {
     if (len > 0)   {
         for (int i = 0; i < len; i++)   {
             f(array[i]);
@@ -25,8 +25,8 @@ void    iter(t *array, int len, void (*f)(a &)) {
     }
 }
 
-template <typename t>
-void    print(t & c)    {
+template <typename T>
+void    print(T & c)    {
     std::cout << c << std::endl;
 }
 
